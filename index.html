@@ -1,3 +1,22 @@
+<style>
+body{
+  background-color: #1A1927;
+}
+
+.container-fluid{
+  background-color: #1A1927;
+  height: 100vh;
+}
+
+#textToType {
+  background-color: #232230;
+  
+}
+
+#textToType span {
+  font-size: 20px;
+}
+  </style>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,22 +29,24 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <title>TypeRace Game</title>
   </head>
-  <body style="margin: 0; padding: 0">
-    <div style="border: 1px solid black" id="canvas"></div>
-    <div>
-      <input
-        type="text"
-        class="form-control"
-        id="textarea"
-        oninput="return this.value = this.value.replace(/[1234567890 ]/g, '')"
-        cols="30"
-        rows="10"
-      />
-      <p id="textToType" style="color: gray"></p>
+  <body>
+    <div class="container-fluid">
+      <div  id="canvas"></div>
+      <div class="game-board d-grid">
+        <div>
+          <input
+            type="text"
+            class="form-control"
+            id="textarea"
+            oninput="return this.value = this.value.replace(/[1234567890 ]/g, '')"
+          />
+        </div>
+        <div id="textToType" class="text bg-dark text-light mt-2" >
+        </div>
+      </div>
     </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
